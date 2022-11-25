@@ -159,6 +159,9 @@
 		cursor: pointer;
 		letter-spacing: 0.06em;
 
+		position: relative;
+		overflow: hidden;
+
 		padding: 10px 32px;
 		margin-left: auto;
 		margin-right: auto;
@@ -174,8 +177,6 @@
 		transition: background-color 250ms var(--timing-function),
 		box-shadow 250ms var(--timing-function);
 
-
-			
 			&:hover,
 			&:focus {
 				background-color: var(--secondary-accent-color);
@@ -185,12 +186,32 @@
 	}
 
 		&__icon {
-	
 			display: flex;
 			fill: var(--main-white-color);
 			align-items: center;
 			margin-left: 10px;
+
+			transition: transform 250ms var(--timing-function);
+
+			.subscription-list__btn:hover & {
+					transform: translateY(-40px);
+				}
+
+			&--animation {
+					fill: var(--main-white-color);
+			
+					position: absolute;
+					top: 50%;
+					right: 32px;
+			
+					transition: transform 250ms var(--timing-function);
+			
+					transform: translateY(calc(-50% + 40px));
+
+					.subscription-list__btn:hover & {
+							transform: translateY(-50%);
+						}
+				}
+			
 		}
-	}
-
-
+}

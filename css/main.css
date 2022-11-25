@@ -447,6 +447,12 @@ img {
   -webkit-transition: color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+}
 .logo--white {
   color: var(--main-white-color);
 }
@@ -458,12 +464,6 @@ img {
 }
 .logo:hover .logo--black, .logo:focus .logo--black {
   color: var(--accent-color);
-}
-@media screen and (min-width: 768px) {
-  .logo {
-    font-size: 26px;
-    line-height: 1.19;
-  }
 }
 
 .page-header {
@@ -1668,6 +1668,8 @@ img {
   font-style: normal;
   cursor: pointer;
   letter-spacing: 0.06em;
+  position: relative;
+  overflow: hidden;
   padding: 10px 32px;
   margin-left: auto;
   margin-right: auto;
@@ -1700,6 +1702,30 @@ img {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 10px;
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+}
+.subscription-list__btn:hover .subscription-list__icon {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+.subscription-list__icon--animation {
+  fill: var(--main-white-color);
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  -webkit-transition: -webkit-transform 250ms var(--timing-function);
+  transition: -webkit-transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
+  -webkit-transform: translateY(calc(-50% + 40px));
+          transform: translateY(calc(-50% + 40px));
+}
+.subscription-list__btn:hover .subscription-list__icon--animation {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .filter-container {
