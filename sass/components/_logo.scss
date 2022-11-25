@@ -12,6 +12,11 @@
 	text-decoration: none;
 	transition: color 250ms var(--timing-function);
 
+	@media screen and (min-width: 1200px) {
+			font-size: 26px;
+			line-height: 1.15;
+		}
+
 	&--white {
 			color: var(--main-white-color);
 			.logo:hover &,
@@ -28,8 +33,5 @@
 				}
 		}
 		
-		@media screen and (min-width: 768px) {
-			font-size: 26px;
-			line-height: 1.19;
-		}
+		
 }
