@@ -1,0 +1,45 @@
+// What do we do? technology
+
+.technology-section {
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
+
+		@media screen and (min-width: 1200px) {
+			padding-top: 0;
+			padding-bottom: 94px;
+		}
+}
+
+.technology {
+	display: flex;
+
+	&__item {
+			margin-right: 30px;
+		}
+	
+		&__item:last-child {
+			margin-right: 0;
+		}
+	
+		&__thumb {
+			position: relative;
+		}
+	
+		&__text {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			padding-top: 27px;
+			padding-bottom: 27px;
+	
+			color: var(--main-white-color);
+			background: rgba(47, 48, 58, 0.8);
+	
+			font-weight: 700;
+			line-height: 1.14;
+			text-align: center;
+			text-transform: uppercase;
+		}
+}
+

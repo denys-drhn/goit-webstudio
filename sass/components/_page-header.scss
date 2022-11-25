@@ -1,0 +1,135 @@
+
+// header 
+.page-header {
+	border-bottom: 1px solid var(--border-color);
+}
+
+@media screen and (min-width: 768px) {
+.header-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	}
+}
+
+// navigation
+	.header-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__menu-button {
+			display: inline-flex;
+			margin: 0;
+			padding: 0;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+			width: 40px;
+			height: 40px;
+
+			@media screen and (min-width: 768px) {
+			display: none;
+			}
+
+			&:hover{
+				fill: var(--accent-color);
+			}
+		}
+
+	&__list {
+
+		display: none;
+		
+		@media screen and (min-width: 768px) {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 1.14;
+			letter-spacing: 0.02em;
+			
+			display: flex;
+			
+			margin-left: 88px;
+			}
+
+		@media screen and (min-width: 1200px) {
+			margin-left: 93px;
+			}
+	}
+
+	&__link {
+	position: relative;
+
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	&--current {
+		color: var(--accent-color);
+	}
+
+	&--current::after {
+		position: absolute;
+		content: '';
+		bottom: -1px;
+		left: 0;
+	
+		width: 100%;
+		height: 4px;
+	
+		background-color: var(--accent-color);
+		border-radius: 2px;
+	}
+}
+	
+	&__item+ &__item {
+	display: flex;
+	margin-left: 50px;
+}
+}
+
+
+
+
+// header address
+	.header-address {
+	color: var(--secondary-text-color);
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	line-height: 1.14;
+	
+	@media screen and (max-width: 767px) {
+		display: none;
+		font-size: 12px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item+ &__item {
+		padding-top: 10px;
+
+		@media screen and (min-width: 1200px) {
+			padding-top: 0px;
+			margin-left: 50px;
+		}
+		}
+
+	&__link{
+		display: flex;
+		fill: currentColor;
+		align-items: center;
+		gap: 8px;
+
+		@media screen and (max-width: 1199px) {
+			font-size: 12px;
+			}
+
+		@media screen and (min-width: 1200px) {
+		gap: 10px;
+		}
+		}
+}
+	
